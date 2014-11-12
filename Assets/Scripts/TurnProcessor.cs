@@ -26,8 +26,8 @@ public class TurnProcessor : MonoBehaviour {
 		}
 	}
 		
-		public void RunTurn(string Id) {
-			Turn nextTurn = currentTurn.GetNextTurn (Id);
+	public void RunTurn(string Id) {
+		Turn nextTurn = currentTurn.GetNextTurn (Id);
 		previousTurn = currentTurn;
 		currentTurn = nextTurn;
 	}

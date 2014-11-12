@@ -4,8 +4,15 @@ using System;
 
 public class FirstTurn : Turn {
 	public override Turn GetNextTurn(string Id){
-		Debug.Log ("Returning next turn");
-		return new SecondTurn();
+		if (Id == "left") {
+			return new leftSecondTurn();
+		} else if (Id == "middle") {
+			return new middleSecondTurn();
+		} else if (Id == "right") {
+			return new rightSecondTurn();
+		} else {
+			return new FirstTurn();
+		}
 	}
 
 	public override Vector3 PlayerPosition() {
