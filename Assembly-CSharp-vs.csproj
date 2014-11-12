@@ -48,6 +48,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Select.cs" />
      <Compile Include="Assets\Scripts\Targeted.cs" />
+     <Compile Include="Assets\Scripts\Turn.cs" />
+     <Compile Include="Assets\Scripts\TurnProcessor.cs" />
+     <Compile Include="Assets\Scripts\Turns\FirstTurn.cs" />
+     <Compile Include="Assets\Scripts\Turns\SecondTurn.cs" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
      <None Include="Assets\Standard Assets\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />

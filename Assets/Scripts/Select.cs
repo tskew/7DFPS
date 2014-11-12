@@ -3,14 +3,10 @@ using System.Collections;
 
 public class Select : MonoBehaviour {
 	public RaycastHit hit;
+
+	private Targeted lastTarget;
 	private Targeted currentTarget;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
 	void Update () {
 		if (Input.GetMouseButtonDown(0)){
 			OnMouseDown();
@@ -19,6 +15,7 @@ public class Select : MonoBehaviour {
 
 	void OnMouseDown () {
 		if (currentTarget != null) {
+			lastTarget = currentTarget;
 			currentTarget.currentlyTargetted = false;
 		}
 
@@ -27,7 +24,12 @@ public class Select : MonoBehaviour {
 		if (Physics.Raycast(ray, out hit, 100)){
 			currentTarget = hit.collider.gameObject.GetComponent<Targeted>();
 			if (currentTarget != null) {
-				currentTarget.currentlyTargetted = true;
+				if (lastTarget == currentTarget) {
+					TurnProcessor turnProcessor = this.gameObject.GetComponent<TurnProcessor>();
+					turnProcessor.RunTurn(currentTarget.Id);
+				} else {
+					currentTarget.currentlyTargetted = true;
+				}
 			}
 		}	
 	}

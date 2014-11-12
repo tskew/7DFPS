@@ -2,13 +2,9 @@
 using System.Collections;
 
 public class Targeted : MonoBehaviour {
+	public string Id;
 	public bool currentlyTargetted;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
 	// Update is called once per frame
 	void Update () {
 		if (currentlyTargetted) {
