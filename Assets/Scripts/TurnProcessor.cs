@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class TurnProcessor : MonoBehaviour {
 	private Turn previousTurn;
@@ -12,13 +13,21 @@ public class TurnProcessor : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Vector3.Distance (this.transform.position, currentTurn.PlayerPosition ()) > .1f) { 
-			Vector3 directionOfTravel = currentTurn.PlayerPosition () - previousTurn.PlayerPosition ();
+		MoveUnit (this.gameObject, currentTurn.PlayerPosition (), previousTurn.PlayerPosition ());
+
+		foreach (string mob in currentTurn.ActiveMobs()) {
+			MoveUnit(GameObject.FindGameObjectWithTag(mob), currentTurn.MobPositions()[mob], previousTurn.MobPositions()[mob]);	
+		}
+	}
+
+	void MoveUnit(GameObject unit, Vector3 plannedPosition, Vector3 previousPosition) {
+		if (Vector3.Distance (unit.transform.position, plannedPosition) > .1f) { 
+			Vector3 directionOfTravel = plannedPosition - previousPosition;
 			//now normalize the direction, since we only want the direction information
 			directionOfTravel.Normalize ();
 			//scale the movement on each axis by the directionOfTravel vector components
-
-			this.transform.Translate (
+			
+			unit.transform.Translate (
 				(directionOfTravel.x * speed * Time.deltaTime),
 				(directionOfTravel.y * speed * Time.deltaTime),
 				(directionOfTravel.z * speed * Time.deltaTime),

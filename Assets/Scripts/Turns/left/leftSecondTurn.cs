@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class leftSecondTurn: Turn
 {
@@ -7,9 +9,19 @@ public class leftSecondTurn: Turn
 		return new FirstTurn ();
 	}
 
-	public override UnityEngine.Vector3 PlayerPosition ()
+	public override Vector3 PlayerPosition ()
 	{
 		throw new NotImplementedException ();
+	}
+
+	public override Dictionary<string, Vector3> MobPositions ()
+	{
+		return new Dictionary<string, Vector3> ();
+	}
+
+	public override IEnumerable<string> ActiveMobs ()
+	{
+		return new List<string>();
 	}
 }
 
