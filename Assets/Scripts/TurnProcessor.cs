@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 
 public class TurnProcessor : MonoBehaviour {
 	private Turn previousTurn;
@@ -15,8 +16,10 @@ public class TurnProcessor : MonoBehaviour {
 	void Update() {
 		MoveUnit (this.gameObject, currentTurn.PlayerPosition (), previousTurn.PlayerPosition ());
 
-		foreach (string mob in currentTurn.ActiveMobs()) {
-			MoveUnit(GameObject.FindGameObjectWithTag(mob), currentTurn.MobPositions()[mob], previousTurn.MobPositions()[mob]);	
+		foreach (TurnActivity mobActivity in currentTurn.MobActivities()) {
+			TurnActivity previousActivity = previousTurn.MobActivities().Where(prev => prev.tag == mobActivity.tag).SingleOrDefault();
+			if (previousActivity == null) {previousActivity = mobActivity;};
+			MoveUnit(GameObject.FindGameObjectWithTag(mobActivity.tag), mobActivity.position, previousActivity.position);	
 		}
 	}
 

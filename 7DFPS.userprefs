@@ -1,31 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\TurnProcessor.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Targeted.cs">
     <Files>
-      <File FileName="Assets\Scripts\Turn.cs" Line="11" Column="1" />
-      <File FileName="Assets\Scripts\Select.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\TurnProcessor.cs" Line="20" Column="4" />
-      <File FileName="Assets\Scripts\Turns\FirstTurn.cs" Line="26" Column="51" />
-      <File FileName="Assets\Scripts\Turns\left\leftSecondTurn.cs" Line="25" Column="3" />
-      <File FileName="Assets\Scripts\Turns\middle\middleSecondTurn.cs" Line="25" Column="3" />
-      <File FileName="Assets\Scripts\Turns\right\rightSecondTurn.cs" Line="19" Column="143" />
+      <File FileName="Assets\Scripts\Turns\FirstTurn.cs" Line="29" Column="3" />
+      <File FileName="Assets\Scripts\Turns\NullTurn.cs" Line="18" Column="3" />
+      <File FileName="Assets\Scripts\Turn.cs" Line="6" Column="17" />
+      <File FileName="Assets\Scripts\TurnActivity.cs" Line="7" Column="17" />
+      <File FileName="c:\Users\Tim\Desktop\Code\Unity\2014-7DFPS\Assets\Scripts\Turns\left\leftSecondTurn.cs" Line="20" Column="3" />
+      <File FileName="c:\Users\Tim\Desktop\Code\Unity\2014-7DFPS\Assets\Scripts\Turns\middle\middleSecondTurn.cs" Line="20" Column="3" />
+      <File FileName="c:\Users\Tim\Desktop\Code\Unity\2014-7DFPS\Assets\Scripts\Turns\right\rightSecondTurn.cs" Line="23" Column="3" />
+      <File FileName="Assets\Scripts\Targeted.cs" Line="1" Column="1" />
     </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="Assembly-CSharp" expanded="True">
-            <Node name="Scripts" expanded="True">
-              <Node name="Turns" expanded="True">
-                <Node name="left" expanded="True" />
-                <Node name="middle" expanded="True" />
-                <Node name="right" expanded="True" />
-              </Node>
-              <Node name="TurnProcessor.cs" selected="True" />
-            </Node>
-          </Node>
-        </State>
-      </Pad>
-    </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />

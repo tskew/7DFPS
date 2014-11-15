@@ -14,14 +14,9 @@ public class leftSecondTurn: Turn
 		throw new NotImplementedException ();
 	}
 
-	public override Dictionary<string, Vector3> MobPositions ()
+	public override IEnumerable<TurnActivity> MobActivities ()
 	{
-		return new Dictionary<string, Vector3> ();
-	}
-
-	public override IEnumerable<string> ActiveMobs ()
-	{
-		return new List<string>();
+		return new List<TurnActivity> ();
 	}
 }
 

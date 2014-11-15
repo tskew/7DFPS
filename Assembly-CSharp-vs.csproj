@@ -49,8 +49,10 @@
      <Compile Include="Assets\Scripts\Select.cs" />
      <Compile Include="Assets\Scripts\Targeted.cs" />
      <Compile Include="Assets\Scripts\Turn.cs" />
+     <Compile Include="Assets\Scripts\TurnActivity.cs" />
      <Compile Include="Assets\Scripts\TurnProcessor.cs" />
      <Compile Include="Assets\Scripts\Turns\FirstTurn.cs" />
+     <Compile Include="Assets\Scripts\Turns\NullTurn.cs" />
      <Compile Include="Assets\Scripts\Turns\left\leftSecondTurn.cs" />
      <Compile Include="Assets\Scripts\Turns\middle\middleSecondTurn.cs" />
      <Compile Include="Assets\Scripts\Turns\right\rightSecondTurn.cs" />

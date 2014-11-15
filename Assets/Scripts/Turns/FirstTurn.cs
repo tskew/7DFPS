@@ -20,14 +20,11 @@ public class FirstTurn : Turn {
 		return new Vector3 (-5.118403f, 0f, -8.101445f);
 	}
 
-	public override Dictionary<string, Vector3> MobPositions ()
+	public override IEnumerable<TurnActivity> MobActivities ()
 	{
-		return new Dictionary<string, Vector3> (){{"right", new Vector3(-2.191365f, 0f, -1.87339f)},
-			{"left", new Vector3(-8.017928f, 0f, -1.722533f)}};
-	}
-
-	public override IEnumerable<string> ActiveMobs ()
-	{
-		return new List<string>(){"right", "left"};
+		return new List<TurnActivity> (){
+			new TurnActivity("right", new Vector3(-2.191365f, 0f, -1.87339f)),
+			new TurnActivity("left", new Vector3(-8.017928f, 0f, -1.722533f))
+		};
 	}
 }
